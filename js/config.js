@@ -8,3 +8,9 @@ window._config = {
         invokeUrl: '' // e.g. https://rc7nyt4tql.execute-api.us-west-2.amazonaws.com/prod',
     }
 };
+function generateSecretHash(username, clientId, clientSecret) {
+    const message = username + clientId;
+    const hmac = crypto.createHmac('sha256', clientSecret);
+    hmac.update(message);
+    return hmac.digest('base64');
+}
