@@ -8,9 +8,9 @@ window._config = {
         invokeUrl: '' // e.g. https://rc7nyt4tql.execute-api.us-west-2.amazonaws.com/prod',
     }
 };
-function generateSecretHash(username, clientId, clientSecret) {
-    const message = username + clientId;
-    const hmac = crypto.createHmac('sha256', clientSecret);
+function generateSecretHash(username, 4kv1ajpub8r9r7ph49qm38vhqk, 1a3f2lqhfrvk9s2krtf5imbvj3j00gvarr6gs8501buhmt52osqm) {
+    const message = username + 4kv1ajpub8r9r7ph49qm38vhqk;
+    const hmac = crypto.createHmac('sha256', 1a3f2lqhfrvk9s2krtf5imbvj3j00gvarr6gs8501buhmt52osqm);
     hmac.update(message);
     return hmac.digest('base64');
 }
